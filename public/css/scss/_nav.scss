@@ -1,0 +1,40 @@
+@mixin rowMachine($numPerRow, $margin) {
+    width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+    margin-right: $margin;
+
+    &:last-child {
+        margin-right:0px;
+    }
+}
+
+
+$icons:(twitter,facebook,instagram,rss);
+
+@each $social in $icons {
+    .#{$social} {
+        background-image: url('/img/#{$social}.png');
+    }
+}
+
+#nav {
+    padding:20px 0;
+    background-color:white;
+
+	ul {
+        overflow: hidden;
+
+		li {
+			float: left;
+            @include rowMachine(4,3%);
+
+			a {
+				color:gray;
+                text-align:center;
+                display: block;
+				&:hover {
+					color:red;
+				}
+			}
+		}
+	}
+}
