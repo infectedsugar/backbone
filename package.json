@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "backbone test",
   "main": "index.js",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "backbone": "^1.2.3",
     "express": "^4.13.3",
@@ -25,7 +27,6 @@
   "repository": {
      "type": "git",
       "url": "https://github.com/infectedsugar/backbone.git"
-  },
-    "author": "",
-    "license": "ISC",
+  }
+
 }

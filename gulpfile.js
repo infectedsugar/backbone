@@ -33,7 +33,7 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(browserify())
         .pipe(rename("all.js"))
-        .pipe(gulp.dest('./public/build/min'));
+        .pipe(gulp.dest('./public/js/min'));
 });
 
 

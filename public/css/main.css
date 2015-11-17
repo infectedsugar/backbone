@@ -1292,11 +1292,11 @@ select {
     left: auto; } }
 
 html {
-  background-color: #000;
+  background-color: #052850;
   height: 100%; }
 
 body {
-  background-color: #000;
+  background-color: #052850;
   font-family: "Questrial", sans-serif;
   font-weight: 500;
   line-height: 1;
@@ -1349,7 +1349,8 @@ a:link:hover {
 
 ul {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  height: 100%; }
   ul li {
     list-style: none;
     -webkit-font-smoothing: antialiased;
@@ -1360,6 +1361,81 @@ ul {
 a[href^=tel] {
   color: inherit;
   text-decoration: none; }
+
+#container {
+  height: 100%;
+  background-position: center;
+  background-image: url(/img/bg.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px; }
+
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+  white-space: nowrap; }
+
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */ }
+
+/* The element to be centered, can also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle; }
+
+.slider-container {
+  display: block;
+  position: relative;
+  height: 600px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden; }
+  .slider-container ul.slider-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 3000px; }
+    .slider-container ul.slider-track li {
+      display: block;
+      position: relative;
+      left: 0px;
+      height: 100%;
+      max-width: 600px;
+      width: 100%;
+      float: left;
+      -webkit-transition: left 300ms ease-in-out;
+      -moz-transition: left 300ms ease-in-out;
+      transition: left 300ms ease-in-out; }
+      .slider-container ul.slider-track li.current {
+        left: 0px; }
+
+.btn-cont {
+  width: 600px;
+  height: 50px;
+  margin: 4px auto 0 auto; }
+  .btn-cont .btn-prev, .btn-cont .btn-next {
+    width: 50%;
+    height: 100%;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #133577;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out; }
+    .btn-cont .btn-prev:hover, .btn-cont .btn-next:hover {
+      background-color: #0b2b6a; }
+    .btn-cont .btn-prev:nth-child(even), .btn-cont .btn-next:nth-child(even) {
+      border-left: 4px solid #0b2b6a; }
 
 .twitter {
   background-image: url("/img/twitter.png"); }
