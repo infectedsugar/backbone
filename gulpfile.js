@@ -21,6 +21,7 @@ gulp.task('lint', function() {
     return gulp.src('./public/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
+
 });
 // Joins all js files into join.js
 // Compresses into joins.js
